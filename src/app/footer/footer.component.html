@@ -1,3 +1,19 @@
-<footer class="footer-container">
+<!-- <footer class="footer-container">
   <div class="footer-wrapper">Sean Swanson &copy; 2020 | Made with ♥ (& Angular)</div>
-</footer>
+</footer> -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
+      <mat-icon>checkroom</mat-icon>
+    </button>
+    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
+      <mat-icon>device_hub</mat-icon>
+    </button>
+    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
