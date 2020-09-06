@@ -1,0 +1,13 @@
+<h1 class="feed-title">Outfit History</h1>
+<div class="feed-post" *ngFor="let outfit of outfits">
+  <h2 class="outfit-date">{{ outfit.dateAdded | date:"fullDate"}}</h2>
+  <div class="outfit-items-container">
+    <mat-card class="outfit-item-wrapper" *ngFor="let item of outfit.items">
+      <div class="outfit-header">
+        <h3 class="outfit-title">{{item.color}} {{item.type}}</h3>
+        <h4 class="outfit-subtitle">{{item.brand}}</h4>
+      </div>
+      <img src="https://livetorchlight.com/wp-content/uploads/2015/10/placeholder-circle.png" alt="placeholder">
+    </mat-card>
+  </div>
+</div>

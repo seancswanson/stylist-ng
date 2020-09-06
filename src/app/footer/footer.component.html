@@ -3,17 +3,35 @@
 </footer> -->
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
-      <mat-icon>home</mat-icon>
-    </button>
-    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
-      <mat-icon>checkroom</mat-icon>
-    </button>
-    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
-      <mat-icon>device_hub</mat-icon>
-    </button>
-    <button (click)=(toggleMenu()) mat-icon-button class="menu-btn" aria-label="menu icon">
-      <mat-icon>settings</mat-icon>
-    </button>
+    <a routerLink="/home">
+      <button mat-icon-button sclass="menu-btn" aria-label="menu icon">
+        <mat-icon>home</mat-icon>
+      </button>
+    </a>
+
+    <div class="footer-spacer"></div>
+
+    <a routerLink="/closet">
+      <button mat-icon-button class="menu-btn" aria-label="menu icon">
+        <mat-icon>checkroom</mat-icon>
+      </button>
+    </a>
+
+    <div class="footer-spacer"></div>
+
+    <a routerLink="/generator">
+      <button mat-icon-button sclass="menu-btn" aria-label="menu icon">
+        <mat-icon>device_hub</mat-icon>
+      </button>
+    </a>
+
+    <div class="footer-spacer"></div>
+
+    <a routerLink="/settings">
+      <button mat-icon-button class="menu-btn" aria-label="menu icon">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </a>
+
   </mat-toolbar-row>
 </mat-toolbar>

@@ -5,8 +5,23 @@ footer {
   font-size: 14px;
 }
 
-.footer-wrapper {
-  padding: 10px;
+.material-icons {
+  font-size: 32px;
+}
+
+.mat-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.mat-icon-button i,
+.mat-icon-button .mat-icon {
+  line-height: 32px;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-around;
 }
 
 button {
@@ -14,17 +29,14 @@ button {
   background: transparent;
   color: white;
   cursor: pointer;
-  width: 100%;
-  border-right: 1px dotted rgba(255, 255, 255, 0.7);
-
-  &:nth-last-of-type(1) {
-    border-right: none;
-
-  }
-
 }
 
-mat-toolbar-row {
-  display: flex;
-  justify-content: space-around;
+.footer-wrapper {
+  padding: 10px;
+}
+
+
+.footer-spacer {
+  height: 60px;
+  border-right: 1px dotted rgba(255, 255, 255, 0.25);
 }
