@@ -6,13 +6,13 @@
 */
 {
   "files": [],
-  "references": [
-    {
+  "references": [{
       "path": "./tsconfig.app.json"
     },
     {
       "path": "./tsconfig.spec.json"
     }
-],
-"enableIvy": false
+  ],
+  "lib": ["dom"],
+  "enableIvy": false
 }

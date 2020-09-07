@@ -1,13 +1,55 @@
-<h1 class="feed-title">Outfit History</h1>
+<div class="feed-header">
+  <h1 class="feed-title">Outfit History</h1>
+  <button class="feed-action-button" mat-icon-button [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu">
+    <mat-icon>library_add</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>create</mat-icon>
+      <span>New Outfit</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>delete_sweep</mat-icon>
+      <span>Clear All</span>
+    </button>
+  </mat-menu>
+</div>
 <div class="feed-post" *ngFor="let outfit of outfits">
-  <h2 class="outfit-date">{{ outfit.dateAdded | date:"fullDate"}}</h2>
-  <div class="outfit-items-container">
-    <mat-card class="outfit-item-wrapper" *ngFor="let item of outfit.items">
-      <div class="outfit-header">
-        <h3 class="outfit-title">{{item.color}} {{item.type}}</h3>
-        <h4 class="outfit-subtitle">{{item.brand}}</h4>
-      </div>
-      <img src="https://livetorchlight.com/wp-content/uploads/2015/10/placeholder-circle.png" alt="placeholder">
-    </mat-card>
+  <div class="feed-post-top">
+    <h2 class="outfit-date">{{ outfit.dateAdded | date:"fullDate"}}</h2>
+    <span class="outfit-time">{{ outfit.dateAdded | date:"h:mm a"}}</span>
+  </div>
+  <div class="feed-post-content">
+    <h3 class="outfit-category">Tops</h3>
+    <div class="outfit-items-container">
+      <mat-card class="outfit-item-wrapper" *ngFor="let top of outfit.items.tops">
+        <div class="outfit-header">
+          <h3 class="outfit-title">{{top.color}} {{top.type}}</h3>
+          <h4 class="outfit-subtitle">{{top.brand}}</h4>
+        </div>
+        <img src="https://livetorchlight.com/wp-content/uploads/2015/10/placeholder-circle.png" alt="placeholder">
+      </mat-card>
+    </div>
+    <h3 class="outfit-category">Bottoms</h3>
+    <div class="outfit-items-container">
+      <mat-card class="outfit-item-wrapper" *ngFor="let bottom of outfit.items.bottoms">
+        <div class="outfit-header">
+          <h3 class="outfit-title">{{bottom.color}} {{bottom.type}}</h3>
+          <h4 class="outfit-subtitle">{{bottom.brand}}</h4>
+        </div>
+        <img src="https://livetorchlight.com/wp-content/uploads/2015/10/placeholder-circle.png" alt="placeholder">
+      </mat-card>
+    </div>
+    <h3 class="outfit-category">Accessory</h3>
+    <div class="outfit-items-container">
+      <mat-card class="outfit-item-wrapper" *ngFor="let top of outfit.items.tops">
+        <div class="outfit-header">
+          <h3 class="outfit-title">{{top.color}} {{top.type}}</h3>
+          <h4 class="outfit-subtitle">{{top.brand}}</h4>
+        </div>
+        <img src="https://livetorchlight.com/wp-content/uploads/2015/10/placeholder-circle.png" alt="placeholder">
+      </mat-card>
+    </div>
   </div>
 </div>
