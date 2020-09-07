@@ -1,0 +1,41 @@
+<div class="app-section-header">
+  <h1 class="app-section-title">Add Item</h1>
+</div>
+<mat-card>
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select>
+      <mat-option value="top">Top</mat-option>
+      <mat-option value="bottom">Bottom</mat-option>
+      <mat-option value="accesory">Accessory</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select>
+      <mat-option value="shirt">Shirt</mat-option>
+      <mat-option value="pants">Pants</mat-option>
+      <mat-option value="shoes">Shoes</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Brand</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput [ngxMatColorPicker]="picker" [formControl]="colorCtr" [disabled]="disabled" value="Pink">
+    <ngx-mat-color-toggle matSuffix [for]="picker"></ngx-mat-color-toggle>
+    <ngx-mat-color-picker #picker [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
+  </mat-form-field>
+</mat-card>

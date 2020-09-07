@@ -24,3 +24,26 @@ app-root {
 .spacer {
   flex: 1 1 auto;
 }
+
+.app-section-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app-section-title {
+  text-transform: uppercase;
+  font-size: 12px !important;
+  border-bottom: 1px dotted #cdcdcd;
+}
+
+.app-section-action-button {
+  margin-left: auto !important;
+  opacity: .4;
+  transition: opacity .2s ease;
+
+  &:hover,
+  :focus {
+    opacity: .8;
+  }
+}

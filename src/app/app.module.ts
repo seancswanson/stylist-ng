@@ -11,6 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } from '@angular-material-components/color-picker';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,6 +24,7 @@ import { ClosetComponent } from './closet/closet.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FooterComponent } from './footer/footer.component';
+import { OutfitFormComponent } from './outfit-form/outfit-form.component';
 
 
 
@@ -37,6 +43,9 @@ const routes: Routes = [
   },
   {
     path: 'settings', component: SettingsComponent
+  },
+  {
+    path: 'new-item', component: OutfitFormComponent
   }
 ]
 @NgModule({
@@ -47,7 +56,8 @@ const routes: Routes = [
     ClosetComponent,
     GeneratorComponent,
     SettingsComponent,
-    FooterComponent
+    FooterComponent,
+    OutfitFormComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -60,10 +70,15 @@ const routes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    NgxMatColorPickerModule
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [{ provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,43 @@
-<p>closet works!</p>
+<div class="app-section-header">
+  <h1 class="app-section-title">Closet</h1>
+  <button class="app-section-action-button" mat-icon-button [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu">
+    <mat-icon>library_add</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>create</mat-icon>
+      <a routerLink="/new-item">
+        New Item
+      </a>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>delete_sweep</mat-icon>
+      <span>Clear All</span>
+    </button>
+  </mat-menu>
+</div>
+
+<mat-tab-group>
+  <mat-tab label="Tops">
+    <mat-tab-group>
+      <mat-tab label="Sub-category"> Content 1 </mat-tab>
+      <mat-tab label="Sub-category"> Content 2 </mat-tab>
+      <mat-tab label="Sub-category"> Content 3 </mat-tab>
+    </mat-tab-group>
+  </mat-tab>
+  <mat-tab label="Bottoms">
+    <mat-tab-group>
+      <mat-tab label="Sub-category"> Content 1 </mat-tab>
+      <mat-tab label="Sub-category"> Content 2 </mat-tab>
+      <mat-tab label="Sub-category"> Content 3 </mat-tab>
+    </mat-tab-group>
+  </mat-tab>
+  <mat-tab label="Accessories">
+    <mat-tab-group>
+      <mat-tab label="Sub-category"> Content 1 </mat-tab>
+      <mat-tab label="Sub-category"> Content 2 </mat-tab>
+      <mat-tab label="Sub-category"> Content 3 </mat-tab>
+    </mat-tab-group>
+  </mat-tab>
+</mat-tab-group>

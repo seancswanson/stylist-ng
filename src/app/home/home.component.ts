@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
 export class HomeComponent implements OnInit {
   myDate = new Date();
   myDateString: string = 'Getting date';
-  outfits = JSON.parse(localStorage.getItem('outfits'));
+  outfits = this.getAllOutfits();
 
   // Setting localStorage for dev purposes with:
   // localStorage.setItem('outfits', JSON.stringify([
@@ -52,4 +52,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getAllOutfits() {
+    return JSON.parse(localStorage.getItem('outfits'));
+  }
 }
