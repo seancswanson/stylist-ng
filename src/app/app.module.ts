@@ -31,21 +31,26 @@ import { OutfitFormComponent } from './outfit-form/outfit-form.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
   {
-    path: 'home', component: HomeComponent
+    path: 'home', component: HomeComponent,
+    data: { animation: 'About' }
   },
   {
-    path: 'closet', component: ClosetComponent
+    path: 'closet', component: ClosetComponent,
+    data: { animation: 'About' }
 
   },
   {
-    path: 'generator', component: GeneratorComponent
+    path: 'generator', component: GeneratorComponent,
+    data: { animation: 'About' }
 
   },
   {
-    path: 'settings', component: SettingsComponent
+    path: 'settings', component: SettingsComponent,
+    data: { animation: 'About' }
   },
   {
-    path: 'new-item', component: OutfitFormComponent
+    path: 'new-item', component: OutfitFormComponent,
+    data: { animation: 'About' }
   }
 ]
 @NgModule({
@@ -78,7 +83,9 @@ const routes: Routes = [
     NgxMatColorPickerModule
   ],
   exports: [RouterModule],
-  providers: [{ provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS }],
+  providers: [
+    { provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
