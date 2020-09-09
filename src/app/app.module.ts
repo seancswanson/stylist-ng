@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -32,16 +33,16 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
   {
     path: 'home', component: HomeComponent,
-    data: { animation: 'About' }
+    data: { animation: 'Home' }
   },
   {
     path: 'closet', component: ClosetComponent,
-    data: { animation: 'About' }
+    data: { animation: 'Closet' }
 
   },
   {
     path: 'generator', component: GeneratorComponent,
-    data: { animation: 'About' }
+    data: { animation: 'Generator' }
 
   },
   {
@@ -70,6 +71,8 @@ const routes: Routes = [
     RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -80,7 +83,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    NgxMatColorPickerModule
+    NgxMatColorPickerModule,
+
   ],
   exports: [RouterModule],
   providers: [

@@ -5,12 +5,13 @@
     <mat-icon>library_add</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>create</mat-icon>
-      <a routerLink="/new-item">
+    <a routerLink="/new-item">
+      <button mat-menu-item>
+
+        <mat-icon>create</mat-icon>
         New Item
-      </a>
-    </button>
+      </button>
+    </a>
     <button mat-menu-item>
       <mat-icon>delete_sweep</mat-icon>
       <span>Clear All</span>

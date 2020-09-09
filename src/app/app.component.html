@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-<div class="content-area">
-  <router-outlet></router-outlet>
+<div class="content-area" [@fadeAnimation]="getRouterOutletState(o)">
+  <router-outlet #o="outlet">
+  </router-outlet>
 </div>
 <app-footer></app-footer>
